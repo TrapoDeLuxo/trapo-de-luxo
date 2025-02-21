@@ -1,0 +1,147 @@
+@font-face {
+    font-family: "fancyttf";
+    src: url(conteudo/fonts/EagleLake-Regular.ttf);
+}
+
+@font-face {
+    font-family: "simplettf";
+    src: url(conteudo/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+    font-family: "simplettfThin";
+    src: url(conteudo/fonts/Ubuntu-Light.ttf);
+}
+
+*{
+    background-color: #121113;
+}
+
+.dad{
+    margin: none;
+}
+
+.searchBar{
+    padding-left: 1%;
+    display: flex;
+    justify-content: center;
+    color:#121113;
+    margin: 7px;
+    background-color: #bfc6c7;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    font-size: 90%;
+    height: 100%;
+    width: 60%;
+    margin-bottom: 5%;
+}
+
+.topMenu{
+    background-color: #121113;
+    height: 20%;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.topMenu>li{
+    padding: 1%;
+    margin: 1%;
+    font-size: 90%;
+    margin-left: 3%;
+    cursor: pointer;
+    font-family: simplettf;
+    color: #eef9fa;
+    transition: 0.3s ease;
+}
+
+.topMenu>li:hover{
+    font-size: 110%;
+    color: #e4a24b;
+}
+
+.topMenu>.logo{
+    margin-left: 3%;
+}
+
+.topMenu>.logo>h1{
+    font-size: 100%;
+    color: #eef9fa;
+    font-family: fancyttf;
+}
+
+.banner{
+    height: 350px;
+    width: 100%;
+    background-image: url(conteudo/imgs/trapoBanner2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.instancia1{
+    margin-top: 2%;
+}
+
+.catalogo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.produto {
+    background-color: #121113;
+    margin: 2%;
+    padding: 1.5%;
+    width: 20%;
+    height: 23%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+    border: 1px solid #ccc;
+}
+
+.produtoImagem {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.produtoNome{
+    font-size: 70%;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: simplettfThin;
+}
+
+.produtoPreco{
+    color: #898d8d;
+    font-size: 100%;
+    font-family: simplettf;
+    margin-top: auto;
+}
+
+.produto>h1{
+    font-size: 90%;
+    color:#898d8d;
+    margin-bottom: 10%;
+}
+
+
+

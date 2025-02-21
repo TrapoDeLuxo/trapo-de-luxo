@@ -1,0 +1,119 @@
+@font-face {
+    font-family: "fancyttf";
+    src: url(conteudo/fonts/EagleLake-Regular.ttf);
+}
+
+@font-face {
+    font-family: "simplettf";
+    src: url(conteudo/fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+    font-family: "simplettfThin";
+    src: url(conteudo/fonts/Ubuntu-Light.ttf);
+}
+
+*{
+    background-color: #121113;
+}
+
+.dad{
+    margin: none;
+}
+
+.topMenu{
+    background-color: #121113;
+    height: 20%;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.topMenu>li{
+    padding: 1%;
+    margin: 1%;
+    font-size: 90%;
+    margin-left: 3%;
+    cursor: pointer;
+    font-family: simplettf;
+    color: #eef9fa;
+    transition: 0.3s ease;
+}
+
+.topMenu>li:hover{
+    font-size: 110%;
+    color: #e4a24b;
+}
+
+.topMenu>.logo{
+    margin-left: 3%;
+}
+
+.topMenu>.logo>h1{
+    font-size: 100%;
+    color: #eef9fa;
+    font-family: fancyttf;
+}
+
+.banner{
+    height: 350px;
+    width: 100%;
+    background-image: url(conteudo/imgs/trapoBanner2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.text{
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    display: flex;
+    margin-top: 1.5%;
+    color: #eef9fa;
+    font-family: simplettfThin;
+    width: 90%;
+    font-size: 50%;
+}
+
+.sobre{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    width: 90%;
+    
+}
+
+.sobre>a{
+    color: #eef9fa;
+    cursor: pointer;
+    font-family: simplettfThin;
+    margin: 1%;
+    font-size: 90%;
+    text-decoration: none;
+    transition: ease 0.2s;
+}
+
+.sobre2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    width: 90%;
+}
+
+.sobre2>a{
+    color: #eef9fa;
+    cursor: pointer;
+    font-family: simplettfThin;
+    margin: 1%;
+    font-size: 90%;
+    text-decoration: none;
+    transition: ease 0.2s;
+}

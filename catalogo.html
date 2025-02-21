@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trapo de Luxo</title>
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+    <div class="dad">
+        <div class="topMenu">
+            <div class="logo">
+                <h1>Trapo de Luxo</h1>
+            </div>
+            <li onclick="catalogoBtn()">Catálogo</li>
+            <li onclick="contatoBtn()">Contato</li>
+            <li onclick="sobreBtn()">Sobre</li>
+        </div>
+
+        <div class="banner"></div>
+
+        <div class="instancia1" id="instance1">
+            <input class="searchBar" type="text" id="search" placeholder="Pesquisar peça">
+                
+            <div class="instBottom">
+                <div id="produtosContainer" class="catalogo">
+                    <!-- produtos gerados automaticamente com JS -->
+                </div>
+            </div>
+            
+            <script>
+                const produtosKey = [
+                    "Conjunto Calça Bailarina Cropped Manga Longa",
+                    "Vestido com Abertura",
+                    "Vestido de Argola",
+                    "Vestido Justo com Bojo Detalhes Cintura",
+                    "Vestido Justo com Viés Cintura",
+                    "Macacão Manga Curta/Longa com Bojo",
+                    "Vestido de Alcinha Básico",
+                    "Macacão com Zíper",
+                    "Vestido Bicolor",
+                    "Vestido com Fenda Bojo",
+                    "Regata Básica Bicolor",
+                    "Vestido com Bojo e Argola",
+                    "Vestido Tubinho com Bojo",
+                    "Body com Fivela"
+                ];
+
+                const customMKey = [
+                    
+                ];
+            
+                const precosKey = [
+                    "R$ 20,00", "R$ 18,00", "R$ 18,00",
+                    "R$ 17,00", "R$ 18,00", "R$ 17,00",
+                    "R$ 17,00", "R$ 10,00", "R$ 15,00", "R$ 17,00",
+                    "R$ 15,00", "R$ 17,00", "R$ 17,00", "R$ 14,00"
+                ];
+            
+                const imagensKey = [
+                    "conteudo/imgs/conjCalcaBailarina.png", //arrumar modelo
+                    "conteudo/imgs/vestidoAbertura.png",
+                    "conteudo/imgs/vestidoArgola.png",
+                    "conteudo/imgs/vestidoJustoBojo.png",
+                    "conteudo/imgs/vestidoJustoVies.png",
+                    "conteudo/imgs/macacaoMangaLongaCurta.png",
+                    "conteudo/imgs/vestidoAlcinhaBasico.png",
+                    "conteudo/imgs/macacaoZiper.png",
+                    "conteudo/imgs/vestidoBicolor.png",
+                    "conteudo/imgs/vestidoFendaBojo.png",
+                    "conteudo/imgs/regataBicolor.png",
+                    "conteudo/imgs/vestidoBojoArgola.png",
+                    "conteudo/imgs/vestidoTubinho.png",
+                    "conteudo/imgs/bodyFivela.png"
+                ];
+
+                const produtosContainer = document.getElementById('produtosContainer');
+                const searchInput = document.getElementById('search');
+            
+                function displayProducts(products, prices, images) {
+                    produtosContainer.innerHTML = ''; 
+                    products.forEach((product, index) => {
+                        const divProduto = document.createElement('div');
+                        divProduto.classList.add('produto');
+            
+                        const imgProduto = document.createElement('img');
+                        imgProduto.src = images[index];
+                        imgProduto.classList.add('produtoImagem');
+            
+                        const nomeProduto = document.createElement('h1');
+                        nomeProduto.classList.add('produtoNome');
+                        nomeProduto.textContent = product;
+            
+                        const precoProduto = document.createElement('a');
+                        precoProduto.classList.add('produtoPreco');
+                        precoProduto.textContent = prices[index];
+            
+                        divProduto.appendChild(imgProduto);
+                        divProduto.appendChild(nomeProduto);
+                        divProduto.appendChild(precoProduto);
+            
+                        produtosContainer.appendChild(divProduto);
+            
+                        // armazena
+                        divProduto.addEventListener('click', function() {
+                            if (images[index]) {
+                                localStorage.setItem("backgroundImageProduto", images[index]);
+                            } else {
+                                localStorage.setItem("backgroundImageProduto", 'conteudo/imgs/default.png');
+                            }
+                            localStorage.setItem("nomeProdutoOrigem", product);
+                            localStorage.setItem("precoProdutoOrigem", prices[index]);
+                            window.location.href = 'produto.html'; // redireciona
+                        });
+                    });
+                }
+            
+                searchInput.addEventListener('input', function() {
+                    const searchText = searchInput.value.toLowerCase();
+                    const filteredProducts = [];
+                    const filteredPrecos = [];
+                    const filteredImagens = [];
+            
+                    for (let i = 0; i < produtosKey.length; i++) {
+                        if (produtosKey[i].toLowerCase().includes(searchText)) {
+                            filteredProducts.push(produtosKey[i]);
+                            filteredPrecos.push(precosKey[i]);
+                            filteredImagens.push(imagensKey[i]);
+                        }
+                    }
+            
+                    displayProducts(filteredProducts, filteredPrecos, filteredImagens);
+                });
+            
+                displayProducts(produtosKey, precosKey, imagensKey);
+            </script>
+        </div>
+    </div>
+</body>
+<script src="instancias.js"></script>
+</html>
