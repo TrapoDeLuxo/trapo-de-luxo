@@ -84,14 +84,14 @@
 
 .text>h1{
     color: #eef9fa;
-    font-family: promptRegular;
+    font-family: simplettfThin;
     font-size: 90%;
     float: center;
 }
 
 .text2>h1{
     color: #eef9fa;
-    font-family: promptRegular;
+    font-family: simplettfThin;
     font-size: 90%;
 }
 
@@ -107,7 +107,7 @@
 .contato>a{
     color: #eef9fa;
     cursor: pointer;
-    font-family: promptRegular;
+    font-family: simplettfThin;
     margin: 1%;
     font-size: 90%;
     text-decoration: none;

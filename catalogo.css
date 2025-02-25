@@ -132,13 +132,13 @@
     font-weight: bold;
     color: #fff;
     margin-bottom: 10px;
-    font-family: promptRegular;
+    font-family: simplettfThin;
 }
 
 .produtoPreco{
     color: #898d8d;
     font-size: 100%;
-    font-family: promptRegular;
+    font-family: simplettf;
     margin-top: auto;
 }
 
