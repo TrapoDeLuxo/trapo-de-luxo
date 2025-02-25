@@ -72,7 +72,7 @@
     display: flex;
     margin-top: 1.5%;
     color: #eef9fa;
-    font-family: simplettfThin;
+    font-family: promptRegular;
     width: 90%;
     font-size: 50%;
 }
@@ -91,7 +91,7 @@
 .sobre>a{
     color: #eef9fa;
     cursor: pointer;
-    font-family: simplettfThin;
+    font-family: promptRegular;
     margin: 1%;
     font-size: 90%;
     text-decoration: none;
@@ -111,7 +111,7 @@
 .sobre2>a{
     color: #eef9fa;
     cursor: pointer;
-    font-family: simplettfThin;
+    font-family: promptRegular;
     margin: 1%;
     font-size: 90%;
     text-decoration: none;

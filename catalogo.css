@@ -13,6 +13,11 @@
     src: url(conteudo/fonts/Ubuntu-Light.ttf);
 }
 
+@font-face {
+    font-family: "promptRegular";
+    src: url(conteudo/fonts/Prompt-Regular.ttf);
+}
+
 *{
     background-color: #121113;
 }
@@ -127,13 +132,13 @@
     font-weight: bold;
     color: #fff;
     margin-bottom: 10px;
-    font-family: simplettfThin;
+    font-family: promptRegular;
 }
 
 .produtoPreco{
     color: #898d8d;
     font-size: 100%;
-    font-family: simplettf;
+    font-family: promptRegular;
     margin-top: auto;
 }
 

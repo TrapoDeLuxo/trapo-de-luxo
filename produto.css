@@ -93,24 +93,24 @@
 .info>h1{
     color:#898d8d;
     font-size: 30px;
-    font-family: simplettfThin;
+    font-family: promptRegular;
 }
 
 .info>a{
     color:#898d8d;
     font-size: 20px;
-    font-family: simplettfThin;
+    font-family: promptRegular;
 }
 
 .info>.info2{
     margin-top: 3%;
     color:#898d8d;
     font-size: 20px;
-    font-family: simplettfThin;
+    font-family: promptRegular;
 }
 
 .contatar{
-    font-family: simplettf;
+    font-family: promptRegular;
     font-size: 30px;
     width: 400px;
     height: 70px;
